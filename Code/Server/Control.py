@@ -241,7 +241,7 @@ class Control:
             return var            
     def map(self,value,fromLow,fromHigh,toLow,toHigh):
         return (toHigh-toLow)*(value-fromLow) / (fromHigh-fromLow) + toLow
-    def changeCoordinates(self,move_order,X1=0,Y1=96,Z1=0,X2=0,Y2=96,Z2=0,pos=np.mat(np.zeros((3, 4)))):
+    def changeCoordinates(self,move_order,X1=0,Y1=96,Z1=0,X2=0,Y2=96,Z2=0,pos=np.asmatrix(np.zeros((3, 4)))):
         if move_order == 'turnLeft':  
             for i in range(2):
                 self.point[2*i][0]=((-1)**(1+i))*X1+10
